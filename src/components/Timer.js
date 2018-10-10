@@ -8,12 +8,12 @@ const Timer = ({ time, toggleTimer, toggleClass }) => {
         <div className="time">
           <span>{time.minutes}:</span>
           {time.seconds < 10 ? <span>0</span> : null}
-          <span>{time.seconds}</span>
+          <span>{time.seconds}</span>          
         </div>
       </div>
       {!time.start
-        ? <button onClick={toggleTimer}>Start</button>
-        : <button onClick={toggleTimer}>Pause</button>
+        ? <button onClick={toggleTimer}>|></button>
+        : <button onClick={toggleTimer}>||</button>
       }
     </React.Fragment>
   );
